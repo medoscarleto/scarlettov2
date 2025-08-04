@@ -18,11 +18,11 @@ interface ReadingResponse {
 }
 
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable not set");
+if (!process.env.GEMINI_API_KEY) {
+  throw new Error("GEMINI_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const getPromptDetails = (request: ReadingRequest): { systemInstruction: string, fullPrompt: string } => {
   const { name, age, gender, prompt, readingType, isPremium } = request;
