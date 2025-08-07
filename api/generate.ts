@@ -386,7 +386,7 @@ async function generateReading(request: ReadingRequest): Promise<ReadingResponse
       const imagePrompt = `really amateur charcoal drawing ${soulmateDescriptor} portrait on paper, around ${request.age || 30} years old`;
       
       imageGenerationPromise = ai.models.generateImages({
-        model: 'imagen-3.0-generate-002',
+        model: 'imagen-4.0-generate-preview-06-06',
         prompt: imagePrompt,
         config: {
           numberOfImages: 1,
